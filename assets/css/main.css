@@ -1585,13 +1585,14 @@
 /* Type */
 
 	html {
-		font-size: 13pt;
+		font-size: 12pt;
 	}
-
+	
+	
 		@media screen and (max-width: 1680px) {
 
 			html {
-				font-size: 11pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -1599,7 +1600,7 @@
 		@media screen and (max-width: 1280px) {
 
 			html {
-				font-size: 11pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -1627,7 +1628,8 @@
 			}
 
 		}
-
+		
+		
 	body {
 		background-color: #fff;
 		color: #444;
@@ -1856,7 +1858,7 @@
 		*/
 
 		.box .content {
-			padding: 2.5rem; /* Changed from 3 to 2.5 by LFS 10/28/2018*/
+			padding: 2rem; /* Changed from 3 to 1.5 by LFS 10/28/2018*/
 		}
 
 		.box > :last-child,
@@ -1874,7 +1876,7 @@
 		@media screen and (max-width: 736px) {
 
 			.box .content {
-				padding: 2rem;
+				padding: 1rem; /* LFS changed from 2 to 1 on 12/19/2018*/
 			}
 
 		}
@@ -4319,7 +4321,7 @@
 			/* LFS added the two pieces below on 10/28/2018 to fix issue with narrowing site*/
 			.banner > article p {
 				margin-bottom: 1rem;
-				font-size: 1em; /* LFS added property on 10/28/2018 */
+				font-size: 0.8em; /* LFS added property on 10/28/2018 */
 			}
 
 			.banner > article h2 {
@@ -4343,11 +4345,6 @@
 
 			.banner > article h2 {
 				font-size: 3em; /* LFS changed from 4 to 3 on 10/28/2018 */
-			}
-
-			.banner > article p {
-				margin-bottom: 1rem;
-				font-size: 0.8em; /* LFS added property on 10/28/2018 */
 			}
 
 		}
@@ -4423,6 +4420,7 @@
 
 		}
 
+		/* LUCIEN added stuff below 12/19/2018 to improve mobile compatibility */
 		@media screen and (max-width: 600px) {
 			.wrapper.style3 .box .content p {
 				font-size: 0.8rem;
