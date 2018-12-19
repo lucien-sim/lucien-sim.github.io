@@ -4485,3 +4485,13 @@
 			}
 
 		}
+
+		@media screen and (max-width: 736px) {
+			.wrapper.style3 .box .content p {
+				font-size: 0.8rem;
+			}
+
+			.wrapper.style3 .box .content li {
+				font-size: 0.8rem;
+			}
+		}
