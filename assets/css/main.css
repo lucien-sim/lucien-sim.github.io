@@ -4494,4 +4494,12 @@
 			.wrapper.style3 .box .content li {
 				font-size: 0.8rem;
 			}
+
+			.wrapper.style3 .box .content h2 {
+				font-size: 1.25rem;
+			}
+
+			.wrapper.style3 h1 {
+				font-size: 2rem;
+			}
 		}
