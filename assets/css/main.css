@@ -3721,69 +3721,6 @@
 
 		}
 
-		/* Lucien added 12/19/2018 for mobile compatibility
-		@media screen and (max-width: 736px) {
-
-			.gallery > * {
-				width: 90%;
-			}
-
-			.gallery > * {
-				padding: 1rem;
-				width: calc(45% + 0.5rem);
-			}
-
-			.gallery > :nth-child(-n + 2) {
-				padding-top: 0.5rem;
-			}
-
-			.gallery > :nth-last-child(-n + 2) {
-				padding-bottom: 0.5rem;
-			}
-
-			.gallery > :nth-child(2n + 1) {
-				padding-left: 0.5rem;
-			}
-
-			.gallery > :nth-child(2n) {
-				padding-right: 0.5rem;
-			}
-
-			.gallery > :nth-child(2n + 1),
-			.gallery > :nth-child(2n) {
-				padding: 1rem;
-				width: calc(90% + 1rem);
-			}
-
-			.gallery > * {
-				padding: 1rem;
-				width: calc(90% + 1rem);
-			}
-
-			.gallery > :nth-child(-n + 1) {
-				padding-top: 0;
-			}
-
-			.gallery > :nth-last-child(-n + 1) {
-				padding-bottom: 0;
-			}
-
-			.gallery > :nth-child(1n + 1) {
-				padding-left: 0;
-			}
-
-			.gallery > :nth-child(1n) {
-				padding-right: 0;
-			}
-
-			.gallery > :nth-child(1n + 1),
-			.gallery > :nth-child(1n) {
-				width: calc(90% + 0.5rem);
-			}
-
-		}
-		*/
-
 /* Header */
 
 	body.subpage {
@@ -4130,7 +4067,7 @@
 /* Banner */
 
 	.banner {
-		background-color: #8a4680;
+		background-color: #000000; /* LFS changed 12/19/2018--it's better in black */
 		color: #e2d1df;
 		padding: 8em 0;
 		position: relative;
