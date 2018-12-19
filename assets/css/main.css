@@ -4172,10 +4172,10 @@
 				}
 
 		.banner > article {
-			-moz-transition: opacity 1.5s ease, visibility 1.5s;
-			-webkit-transition: opacity 1.5s ease, visibility 1.5s;
-			-ms-transition: opacity 1.5s ease, visibility 1.5s;
-			transition: opacity 1.5s ease, visibility 1.5s;
+			-moz-transition: opacity 0.2s ease, visibility 0.2s;
+			-webkit-transition: opacity 0.2s ease, visibility 0.2s;
+			-ms-transition: opacity 0.2s ease, visibility 0.2s;
+			transition: opacity 0.2s ease, visibility 0.2s;
 			background-attachment: fixed;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -4356,13 +4356,18 @@
 		}
 
 		body.is-mobile .banner > article {
-			background-attachment: fixed;
+			background-attachment: scroll;
 		}
 
 		/* LFS added below on 12/18/2018 */
 		body.is-mobile .banner.full {
 			min-height: 75vh;
 			height: 75vh !important;
+		}
+
+		body.is-mobile .banner > article h2 {
+			font-size: 3rem; /* LFS changed from 7 to 5 on 10/28/2018  */
+			margin-top: 0;
 		}
 
 
