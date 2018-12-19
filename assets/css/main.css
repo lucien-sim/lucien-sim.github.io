@@ -3446,17 +3446,21 @@
 			.wrapper > .inner {
 				width: 90%;
 			}
-
+	
 			.wrapper.style3 {
-				background-attachment: fixed; /* LFS changed from scroll to fixed 12/18/2018 */
+				background-attachment: fixed;  /*LFS changed from scroll to fixed 12/18/2018 */
 			}
-
+			
 		}
 
 		@media screen and (max-width: 736px) {
 
 			.wrapper {
 				padding: 3rem 0 1rem 0 ;
+			}
+
+			.wrapper.style3 {
+				background-image: none;
 			}
 
 		}
@@ -4307,7 +4311,7 @@
 			}
 
 			.banner > article {
-				background-attachment: fixed; /* was scroll */
+				background-attachment: scroll; /* was scroll */
 			}
 
 			/* LFS added the two pieces below on 10/28/2018 to fix issue with narrowing site*/
@@ -4350,7 +4354,7 @@
 		@media screen and (max-width: 450px) {
 
 			.banner > article h2 {
-				font-size: 2.5em; 
+				font-size: 2em; 
 			}
 
 		}
