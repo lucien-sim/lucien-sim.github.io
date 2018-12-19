@@ -4366,8 +4366,8 @@
 		}
 
 		body.is-mobile .banner > article h2 {
-			font-size: 3rem; /* LFS changed from 7 to 5 on 10/28/2018  */
-			margin-top: 0;
+			font-size: 2rem; /* LFS changed from 7 to 5 on 10/28/2018  */
+			margin-top: 1rem;
 		}
 
 
