@@ -1585,14 +1585,14 @@
 /* Type */
 
 	html {
-		font-size: 12pt;
+		font-size: 11pt;
 	}
 	
 	
 		@media screen and (max-width: 1680px) {
 
 			html {
-				font-size: 12pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -1600,7 +1600,7 @@
 		@media screen and (max-width: 1280px) {
 
 			html {
-				font-size: 12pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -1608,7 +1608,7 @@
 		@media screen and (max-width: 980px) {
 
 			html {
-				font-size: 12pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -1616,7 +1616,7 @@
 		@media screen and (max-width: 736px) {
 
 			html {
-				font-size: 12pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -1624,7 +1624,7 @@
 		@media screen and (max-width: 480px) {
 
 			html {
-				font-size: 12pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -1698,15 +1698,15 @@
 
 	/* Added by LFS on 12/18/2019 */
 	h1 {
-		font-size: 2.75rem;
+		font-size: 3rem;
 	}
 
 	h2 {
-		font-size: 1.75rem;
+		font-size: 2rem;
 	}
 
 	h3 {
-		font-size: 1.35rem;
+		font-size: 1.3rem;
 	}
 
 	h4 {
@@ -3194,6 +3194,12 @@
 
 			.wrapper.style3 .box .content ul li {
 				color: #f2f2f2;
+				font-size: 1.06rem;
+			}
+
+			.wrapper.style3 .box .content p {
+				color: #f2f2f2;
+				font-size: 1.06rem;
 			}
 
 
@@ -3394,7 +3400,7 @@
 			.wrapper.style3 p {
 				/*text-transform: uppercase;*/
 				color: rgba(255, 255, 255, 0.9); /* LFS 10/28/2018 added this property*/
-				font-size: 1rem;
+				font-size: 1.1rem;
 				font-weight: 300;
 				margin: 0 0 .5rem 0;
 				padding: 0 0 1rem 0;
@@ -4219,8 +4225,8 @@
 			}
 
 			.banner > article .inner {
-				position: relative;
-				display: inline-block;
+				position: relative; 
+				display: inline-block; /* inline-block */
 				vertical-align: middle;
 				z-index: 1;
 			}
@@ -4230,7 +4236,7 @@
 				}
 
 			.banner > article h2 {
-				font-size: 5rem; /* LFS changed from 7 to 5 on 10/28/2018  */
+				font-size: 5.25rem; /* LFS changed from 7 to 5 on 10/28/2018  */
 				margin-bottom: 0;
 				color: #FFF;
 				font-weight: 300;
@@ -4243,7 +4249,7 @@
 			.banner > article p {
 				color: rgba(255, 255, 255, 0.65);
 				text-transform: uppercase;
-				font-size: 1.05rem; /* Property changed by LFS on 10/28/2018: from 1 to 1.1*/
+				font-size: 1.1rem; /* Property changed by LFS on 10/28/2018: from 1 to 1.05*/
 				font-weight: 300;
 				margin: 0;
 				padding-top: 1.05rem;  /* Property added by LFS on 10/28/2018 */
@@ -4295,7 +4301,7 @@
 		}
 
 		@media screen and (max-width: 1280px) {
-			
+
 			/*
 			.banner.full {
 				padding: 0;
@@ -4321,11 +4327,11 @@
 			/* LFS added the two pieces below on 10/28/2018 to fix issue with narrowing site*/
 			.banner > article p {
 				margin-bottom: 1rem;
-				font-size: 0.8em; /* LFS added property on 10/28/2018 */
+				font-size: 1em; /* LFS added property on 10/28/2018 */
 			}
 
 			.banner > article h2 {
-				font-size: 3em; /* LFS changed from 4 to 3 on 10/28/2018 */
+				font-size: 3.6em; /* LFS changed from 4 to 3 on 10/28/2018 */
 			}
 
 		}
@@ -4354,6 +4360,11 @@
 
 			.banner > article h2 {
 				font-size: 2em; 
+			}
+
+			/* LFS added the piece below on 12/19/2018 to imporve mobile compatibility*/
+			.banner > article p {
+				font-size: 0.8em; 
 			}
 
 		}
@@ -4426,7 +4437,7 @@
 				font-size: 0.8rem;
 			}
 
-			.wrapper.style3 .box .content li {
+			.wrapper.style3 .box .content ul li {
 				font-size: 0.8rem;
 			}
 
@@ -4438,3 +4449,13 @@
 				font-size: 2rem;
 			}
 		}
+
+
+
+
+
+
+
+
+
+
