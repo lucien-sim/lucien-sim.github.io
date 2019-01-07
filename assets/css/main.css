@@ -1819,6 +1819,7 @@
 	.box {
 		margin-bottom: 2rem;
 		background: #FFF;
+		border-radius: 5px; /* Added LFS 1/6/2019*/
 	}
 
 		.box .image.fit {
