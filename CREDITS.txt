@@ -1,6 +1,6 @@
 # Image Credits
 
-- Terra satellite (NASA)
+- Google Earth
 
 - University of Wisconsin Lidar Group (http://hsrl.ssec.wisc.edu/by_site/9/all/2018/12/19/)
 
@@ -8,3 +8,4 @@
 
 - Matthias Haker (https://www.deviantart.com/matthias-haker/art/New-York-City-Haze-295413140)
 
+- ccho (https://www.flickr.com/photos/ccho/11309749684/)
