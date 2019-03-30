@@ -2903,8 +2903,91 @@
 			}
 
 		.wrapper.style2 {
-			background-color: #f2f2f2;
-			color: #a6a6a6;
+			background-color: #000;
+			color: #bfbfbf;
+		}
+
+			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
+				color: #ffffff;
+			}
+
+			/* LFS added two below on 12/18/2018, to change links in .wrapper.style3 content */
+			.wrapper.style2 a:link, .wrapper.style2 a:visited {
+				color: rgba(255, 255, 255, 0.9)
+			}
+
+			.wrapper.style2 a:hover {
+				color: rgba(255, 255, 255, 0.6);
+			}
+
+			.wrapper.style2 strong, .wrapper.style2 b {
+				color: #ffffff;
+			}
+
+			.wrapper.style2 h1, .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6 {
+				color: #ffffff;
+			}
+
+			.wrapper.style2 blockquote {
+				border-left-color: rgba(255, 255, 255, 0.25);
+			}
+
+			.wrapper.style2 code {
+				background: rgba(255, 255, 255, 0.075);
+				border-color: rgba(255, 255, 255, 0.25); /* Added by LFS 10/28/2018 */
+			}
+
+			.wrapper.style2 hr {
+				border-bottom-color: rgba(255, 255, 255, 0.25);
+			}
+
+			.wrapper.style2 .box {
+				background-color: rgba(60, 60, 60, 0.9);
+				border-color: rgba(255, 255, 255, 0.4);
+			}
+
+			/* Added by LFS 10/28/2018 -- turn links in box headers light gray. */
+			.wrapper.style2 .box .content header h2 a {
+				color: #f2f2f2;
+			}
+
+			/* Added by LFS 10/29/2018 -- dealing with links near the top of the portfolio pages */
+
+			.wrapper.style2 .inner .linkBack a:link, .wrapper.style2 .inner .linkBack a:visited {
+				color: rgba(255, 255, 255, 0.35);
+			}
+
+			.wrapper.style2 .inner .linkBack a:hover {
+				color: #ffffff
+			}
+
+			/* Added by LFS 12/18/2018 -- dealing with Portfolio page links */
+
+			.wrapper.style2 .inner .portfolioLink a:link, .wrapper.style2 .inner .portfolioLink a:visited {
+				color: rgba(255, 255, 255, 1)
+			}
+
+			.wrapper.style2 .inner .portfolioLink a:hover {
+				color: rgba(255, 255, 255, 0.6);
+			}
+
+			/* Added by LFS 12/18/2018 -- dealing with in-box list item text color */
+
+			.wrapper.style2 .box .content ul li {
+				color: #f2f2f2;
+				font-size: 1.06rem;
+			}
+
+			.wrapper.style2 .box .content p {
+				color: #f2f2f2;
+				font-size: 1.06rem;
+			}
+
+
+		/*
+		.wrapper.style2 {
+			background-color: #000000; 
+			color: #FFFFFF;
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
@@ -2940,7 +3023,9 @@
 				border-color: rgba(0, 0, 0, 0.15);
 			}
 
-			/* Added by LFS 10/28/2018 -- turn links in box headers black. */
+			*/
+			/*-- Added by LFS 10/28/2018 -- turn links in box headers black. */
+			/*
 			.wrapper.style2 .box .content header h2 a:link, .wrapper.style2 .box .content header h2 a:visited {
 				color: black;
 			}
@@ -2948,6 +3033,7 @@
 			.wrapper.style2 .box .content header h2 a:hover {
 				color: rgba(94, 94, 94, 0.7);
 			}
+		*/
 
 			.wrapper.style2 input[type="submit"],
 			.wrapper.style2 input[type="reset"],
