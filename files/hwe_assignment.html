@@ -11839,10 +11839,10 @@ div#notebook {
 
 
 
-<div id="bab0cea4-9181-4a6c-8101-bdaa4af7acc3"></div>
+<div id="c91afe25-eaa8-432d-9fee-81ce00139045"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#bab0cea4-9181-4a6c-8101-bdaa4af7acc3');
+var element = $('#c91afe25-eaa8-432d-9fee-81ce00139045');
 
 (function(root) {
   function now() {
@@ -12175,60 +12175,17 @@ var element = $('#bab0cea4-9181-4a6c-8101-bdaa4af7acc3');
 </ul>
 <p>Potential problems with the data:</p>
 <ul>
-<li>For specific BBLs, sometimes the addresses, number of residential units, latitude, and longitude change, but not by much. These changes are pretty reasonable and don't strike me as serious problems with the data quality (the addresses are nearby; sometimes the # of units does actually change in buildings, and different lat/lon measurements can yield slightly different values). </li>
+<li>For single BBLs, sometimes the addresses, number of residential units, latitude, and longitude change from PLUTO year to PLUTO year. I looked at the changes for 100 BBLs and found that they're pretty reasonable--for example, changes in addresses from "6th Ave" to "Ave of the Americas," corner lots changing addresses from one intersecting street to the other, small shifts in lan/lon, small changes in the number of residential units. While you need to be careful about this when identifying properties, I don't think it causes any big problems in this analysis because we're identifying properties with the BBL. </li>
 <li>The <code>YearBuilt</code> is sometimes equal to zero. I talk about this in my answer to the third question. </li>
 <li>The <code>BldgArea</code> is sometimes equal to zero. The data dictionary mentions this possibility and says that it's either because the number isn't available, or because there isn't actually a building on the property. </li>
-<li>The <code>LotArea</code> is sometimes zero. I think this just means that the actual value isn't available. </li>
-<li>The <code>lat</code> and <code>lon</code> are sometimes bad--eg. tax lots in the river. I'll deal with this later on. </li>
-<li>And everything else looks reasonable! I don't think any of these issues are severe enough to justify removing entire tax lots from the dataset right at the beginning. </li>
+<li>The <code>LotArea</code> is sometimes zero. I think this just means that the actual value isn't available. Maybe I could fix this by downloading the tax lot footprints, joining those with PLUTO, and estimating the area of those footprints? </li>
+<li>The <code>lat</code> and <code>lon</code> are sometimes bad--eg. tax lots in the river. I'll deal with this later on. Also, I noticed that sometimes multiple BBL's have identical lat/lon values. Often, these properties also have the same (or very similar) addresses. This could be indicative of a problem, but I'm not sure. </li>
+<li>And everything else looks reasonable to me! The numbers of residential units, building areas, and lot areas are within reasonable ranges, the borough codes are all between 1 and 5, and the addresses look good. </li>
 </ul>
+<p>I don't think any of these issues are severe enough to justify removing tax lots from the dataset at the start of the analysis. If they become an issue while I'm asnswering the questions, I'll address them then.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pluto_data</span><span class="p">[</span><span class="s1">&#39;pluto_version_year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2010    860543
-2009    860521
-2011    860322
-2015    859466
-2013    859374
-2012    859331
-2017    859225
-2018    859214
-2016    859207
-2019    858978
-2014    858916
-Name: pluto_version_year, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -12515,10 +12472,10 @@ Name: pluto_version_year, dtype: int64</pre>
 
 
 
-<div id="05bd32e1-c153-40d7-8c68-67f19bc93f3f"></div>
+<div id="1dabcc81-ce3f-4f1e-a68e-166fc5622d6f"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#05bd32e1-c153-40d7-8c68-67f19bc93f3f');
+var element = $('#1dabcc81-ce3f-4f1e-a68e-166fc5622d6f');
 (function(root) {
   function embed_document(root) {
     
@@ -12558,6 +12515,10 @@ var element = $('#05bd32e1-c153-40d7-8c68-67f19bc93f3f');
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h2><p>Create a line chart that shows the number of residential units in Brooklyn over time from 2012 to current day. Exclude one and two family dwellings.</p>
+<p>I spotted a potential problem:</p>
+<ul>
+<li>177/75616 of the multi-family residential buildings have <code>UnitsRes = 0</code>. This isn't a huge problem because it's less than 1% of the tax lots I'm interested in, but if I wanted to fix those values, maybe I could regress building square footage against the number of residences, and use that to estimate the number of residences from those buildings' square footage? Since the resulting correction would be very small, I don't think that's necessary here. </li>
+</ul>
 <p>NOTE: I'm excluding units in apartment hotels and dormitories from the analysis because I'm not sure if those units qualify as "residential." However, I am including residential units in multiple-use residences for 3-6 families (<code>BldgClass in ['S3','S4','S5']</code>).</p>
 
 </div>
@@ -12609,10 +12570,10 @@ var element = $('#05bd32e1-c153-40d7-8c68-67f19bc93f3f');
 
 
 
-<div id="c5114e24-18af-4c4b-aa23-9aa72f01d954"></div>
+<div id="7655d820-642b-415e-b9d1-ad8456a9fae6"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#c5114e24-18af-4c4b-aa23-9aa72f01d954');
+var element = $('#7655d820-642b-415e-b9d1-ad8456a9fae6');
 (function(root) {
   function embed_document(root) {
     
@@ -12656,6 +12617,7 @@ var element = $('#c5114e24-18af-4c4b-aa23-9aa72f01d954');
 <ol>
 <li><strong>There's no building on the tax lot.</strong> In the cell below, I've printed the ten most frequent <code>BldgClass</code> values for tax lots with <code>YearBuilt = 0</code>. The ten most common are: V0 (vacant land; zoned residential, not Manhattan), V1 (vacant land; zoned commercial or manhattan residential), G7 (unlicensed parking lot), Z9 (miscellaneous; other), Q0 (open space), Q1 (parks/recreation facilities), U7 (utility bureau properties; transportation-public ownership), U6 (raiload-private ownership), V9 (vacant land; miscellaneous), and G6 (licensed parking lots). Many tax lots with these functions probably won't have buildings, which suggests that the <code>YearBuilt</code> could be zero when there's no building on the tax lot. </li>
 <li><strong>The building construction year is unavailable.</strong> The data dictionary says that the <code>BldgArea</code> is set to zero when there is no building or when the square footage is unavailable, so it's possible that PLUTO uses the same convention when the building construction year isn't available. </li>
+<li><strong>Someone made a mistake.</strong> I'd imagine that humans originally entered a lot of this data, so mistakes are always possible. Since I didn't notice many typos elsewhere in the dataset, I'd imagine this is the least likely reason. </li>
 </ol>
 
 </div>
